@@ -11,7 +11,7 @@ export function Footer() {
               <NordLabLogo size={44} />
             </a>
             <p className="text-warm-gray leading-relaxed max-w-sm text-sm sm:text-base">
-              We build quoting, ordering, and inventory systems for product distributors 
+              We build quoting, ordering, and inventory systems for product distributors
               who are done managing their business through email and spreadsheets.
             </p>
           </div>
@@ -49,15 +49,15 @@ export function Footer() {
             </h4>
             <div className="space-y-4">
               <p className="text-warm-gray text-sm leading-relaxed">
-                Not sure if we are the right fit? Book a 30-minute call. 
-                We will look at your current setup and tell you honestly 
+                Not sure if we are the right fit? Book a 30-minute call.
+                We will look at your current setup and tell you honestly
                 whether we can make a difference.
               </p>
-              <a
-                href="https://calendly.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 text-copper hover:text-copper-light transition-colors duration-300 text-sm font-medium"
+              <button
+                data-cal-namespace="30min"
+                data-cal-link="nordlab/30min"
+                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"auto"}'
+                className="inline-flex items-center gap-3 text-copper hover:text-copper-light transition-colors duration-300 text-sm font-medium cursor-pointer"
               >
                 <span>Schedule a strategy call</span>
                 <svg
@@ -69,7 +69,7 @@ export function Footer() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -81,7 +81,7 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-4">
             <span className="text-warm-gray/30 text-xs tracking-wide">
-              Operations systems for product distributors
+              Available for New Projects
             </span>
             <div className="w-1.5 h-1.5 bg-copper rounded-sm" />
           </div>

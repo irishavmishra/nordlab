@@ -107,24 +107,23 @@ export function CTASection() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-          <a
-            href="https://calendly.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-copper text-obsidian px-10 py-4 text-base font-medium tracking-wide inline-flex items-center justify-center gap-3"
+          <button
+            data-cal-namespace="30min"
+            data-cal-link="nordlab/30min"
+            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"auto"}'
+            className="btn-copper text-obsidian px-10 py-4 text-base font-medium tracking-wide inline-flex items-center justify-center gap-3 cursor-pointer"
           >
             Schedule a Strategy Call
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </a>
+          </button>
           <button
             onClick={() => setFormOpen(!formOpen)}
-            className={`btn-ghost px-10 py-4 text-base font-medium tracking-wide inline-flex items-center justify-center gap-3 transition-all duration-300 ${
-              formOpen
+            className={`btn-ghost px-10 py-4 text-base font-medium tracking-wide inline-flex items-center justify-center gap-3 transition-all duration-300 ${formOpen
                 ? 'text-copper border-copper/60'
                 : 'text-cream'
-            }`}
+              }`}
           >
             {formOpen ? (
               <>
@@ -223,11 +222,10 @@ export function CTASection() {
                       key={range}
                       type="button"
                       onClick={() => setFormData(prev => ({ ...prev, dealerRange: range }))}
-                      className={`px-3 py-2.5 text-sm rounded border transition-all duration-200 tracking-wide ${
-                        formData.dealerRange === range
+                      className={`px-3 py-2.5 text-sm rounded border transition-all duration-200 tracking-wide ${formData.dealerRange === range
                           ? 'bg-copper/15 border-copper/50 text-copper'
                           : 'bg-charcoal/30 border-warm-gray/10 text-warm-gray/40 hover:border-warm-gray/25 hover:text-warm-gray/60'
-                      }`}
+                        }`}
                     >
                       {range}
                     </button>
@@ -250,11 +248,10 @@ export function CTASection() {
                       key={method}
                       type="button"
                       onClick={() => toggleOrderMethod(method)}
-                      className={`px-3 py-2.5 text-sm rounded border transition-all duration-200 text-left tracking-wide ${
-                        formData.orderMethods.includes(method)
+                      className={`px-3 py-2.5 text-sm rounded border transition-all duration-200 text-left tracking-wide ${formData.orderMethods.includes(method)
                           ? 'bg-copper/15 border-copper/50 text-copper'
                           : 'bg-charcoal/30 border-warm-gray/10 text-warm-gray/40 hover:border-warm-gray/25 hover:text-warm-gray/60'
-                      }`}
+                        }`}
                     >
                       {method}
                     </button>
@@ -277,11 +274,10 @@ export function CTASection() {
                       key={h}
                       type="button"
                       onClick={() => toggleHeadache(h)}
-                      className={`px-3 py-2.5 text-sm rounded border transition-all duration-200 text-left tracking-wide ${
-                        formData.headaches.includes(h)
+                      className={`px-3 py-2.5 text-sm rounded border transition-all duration-200 text-left tracking-wide ${formData.headaches.includes(h)
                           ? 'bg-copper/15 border-copper/50 text-copper'
                           : 'bg-charcoal/30 border-warm-gray/10 text-warm-gray/40 hover:border-warm-gray/25 hover:text-warm-gray/60'
-                      }`}
+                        }`}
                     >
                       {h}
                     </button>
@@ -348,11 +344,10 @@ export function CTASection() {
                 <button
                   type="submit"
                   disabled={!isValid}
-                  className={`w-full py-4 rounded text-base font-medium tracking-wide transition-all duration-300 ${
-                    isValid
+                  className={`w-full py-4 rounded text-base font-medium tracking-wide transition-all duration-300 ${isValid
                       ? 'btn-copper text-obsidian cursor-pointer'
                       : 'bg-charcoal/50 text-warm-gray/20 border border-warm-gray/10 cursor-not-allowed'
-                  }`}
+                    }`}
                 >
                   Send My Assessment
                 </button>

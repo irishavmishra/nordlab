@@ -32,11 +32,10 @@ export function Header() {
   return (
     <>
       <header
-        className={`fixed top-[2px] left-0 right-0 z-40 transition-all duration-500 ${
-          scrolled
-            ? "bg-obsidian/95 backdrop-blur-md border-b border-slate-dark"
-            : "bg-transparent"
-        }`}
+        className={`fixed top-[2px] left-0 right-0 z-40 transition-all duration-500 ${scrolled
+          ? "bg-obsidian/95 backdrop-blur-md border-b border-slate-dark"
+          : "bg-transparent"
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="flex items-center justify-between h-20">
@@ -59,14 +58,14 @@ export function Header() {
             </nav>
 
             {/* Desktop CTA */}
-            <a
-              href="https://calendly.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden lg:inline-flex btn-copper text-obsidian px-6 py-3 text-sm font-medium tracking-wide"
+            <button
+              data-cal-namespace="30min"
+              data-cal-link="nordlab/30min"
+              data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"auto"}'
+              className="hidden lg:inline-flex btn-copper text-obsidian px-6 py-3 text-sm font-medium tracking-wide cursor-pointer"
             >
               Book a Call
-            </a>
+            </button>
 
             {/* Mobile hamburger */}
             <button
@@ -76,19 +75,16 @@ export function Header() {
               aria-expanded={mobileOpen}
             >
               <span
-                className={`block w-6 h-px bg-cream transition-all duration-300 ${
-                  mobileOpen ? "rotate-45 translate-y-[3.5px]" : ""
-                }`}
+                className={`block w-6 h-px bg-cream transition-all duration-300 ${mobileOpen ? "rotate-45 translate-y-[3.5px]" : ""
+                  }`}
               />
               <span
-                className={`block w-6 h-px bg-cream transition-all duration-300 ${
-                  mobileOpen ? "opacity-0" : ""
-                }`}
+                className={`block w-6 h-px bg-cream transition-all duration-300 ${mobileOpen ? "opacity-0" : ""
+                  }`}
               />
               <span
-                className={`block w-6 h-px bg-cream transition-all duration-300 ${
-                  mobileOpen ? "-rotate-45 -translate-y-[3.5px]" : ""
-                }`}
+                className={`block w-6 h-px bg-cream transition-all duration-300 ${mobileOpen ? "-rotate-45 -translate-y-[3.5px]" : ""
+                  }`}
               />
             </button>
           </div>
@@ -113,15 +109,15 @@ export function Header() {
               </a>
             ))}
             <div className="mt-4 pt-8 border-t border-slate-dark">
-              <a
-                href="https://calendly.com"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                data-cal-namespace="30min"
+                data-cal-link="nordlab/30min"
+                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"auto"}'
                 onClick={() => setMobileOpen(false)}
-                className="btn-copper text-obsidian px-10 py-4 text-base font-medium tracking-wide inline-block"
+                className="btn-copper text-obsidian px-10 py-4 text-base font-medium tracking-wide inline-block cursor-pointer"
               >
                 Book a Strategy Call
-              </a>
+              </button>
             </div>
           </nav>
         </div>

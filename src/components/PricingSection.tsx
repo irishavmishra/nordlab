@@ -122,11 +122,10 @@ export function PricingSection() {
           {tiers.map((tier, index) => (
             <div
               key={index}
-              className={`group relative border transition-all duration-500 ${
-                tier.featured
+              className={`group relative border transition-all duration-500 ${tier.featured
                   ? 'border-copper/30 bg-charcoal/60 hover:border-copper/50'
                   : 'border-warm-gray/8 bg-charcoal/20 hover:border-warm-gray/20'
-              }`}
+                }`}
             >
               {/* Featured badge */}
               {tier.featured && (
@@ -159,9 +158,8 @@ export function PricingSection() {
                       />
                     </div>
                     <h3
-                      className={`serif-display text-xl lg:text-2xl ${
-                        tier.featured ? 'text-copper' : 'text-cream'
-                      } group-hover:text-copper transition-colors`}
+                      className={`serif-display text-xl lg:text-2xl ${tier.featured ? 'text-copper' : 'text-cream'
+                        } group-hover:text-copper transition-colors`}
                     >
                       {tier.label}
                     </h3>
@@ -169,9 +167,8 @@ export function PricingSection() {
                   <div className="flex items-baseline gap-6 lg:text-right">
                     <div>
                       <span
-                        className={`serif-display text-2xl lg:text-3xl ${
-                          tier.featured ? 'text-cream' : 'text-cream/80'
-                        }`}
+                        className={`serif-display text-2xl lg:text-3xl ${tier.featured ? 'text-cream' : 'text-cream/80'
+                          }`}
                       >
                         {tier.price}
                       </span>
@@ -255,14 +252,14 @@ export function PricingSection() {
               a clear picture of where digital systems will save time and money -
               whether you work with us or not.
             </p>
-            <a
-              href="https://calendly.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-copper text-obsidian px-8 py-3.5 text-sm font-medium tracking-wide inline-block"
+            <button
+              data-cal-namespace="30min"
+              data-cal-link="nordlab/30min"
+              data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"auto"}'
+              className="btn-copper text-obsidian px-8 py-3.5 text-sm font-medium tracking-wide inline-block cursor-pointer"
             >
               Book Your Free Review
-            </a>
+            </button>
             <p className="text-warm-gray/25 text-xs mt-4">
               No pitch deck. No pressure. Just a real conversation about your
               operations.
