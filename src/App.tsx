@@ -11,16 +11,18 @@ import { WhyUsSection } from "./components/WhyUsSection";
 import { TeamSection } from "./components/TeamSection";
 import { CTASection } from "./components/CTASection";
 import { Footer } from "./components/Footer";
+import { SEO } from "./components/SEO";
 
 export function App() {
   return (
     <div className="min-h-screen bg-obsidian text-cream relative">
+      <SEO />
       {/* Noise texture overlay */}
       <div className="noise-overlay" aria-hidden="true" />
-      
+
       {/* Decorative top border */}
       <div className="fixed top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-copper to-transparent z-50" aria-hidden="true" />
-      
+
       <Header />
       <main>
         <HeroSection />

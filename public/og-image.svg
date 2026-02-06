@@ -1,0 +1,50 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0B0C10"/>
+  
+  <!-- Subtle Noise/Texture Overlay (simulated with opacity) -->
+  <rect width="1200" height="630" fill="#ffffff" fill-opacity="0.02"/>
+  
+  <!-- Content Container (Centered) -->
+  <g transform="translate(600, 315)">
+    
+    <!-- Logo Icon (Left side) - Scaled 4x -->
+    <g transform="translate(-430, -100) scale(4)">
+      <defs>
+        <linearGradient id="nordlab-copper" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#d4a574" />
+          <stop offset="50%" stop-color="#c9915a" />
+          <stop offset="100%" stop-color="#b07a45" />
+        </linearGradient>
+      </defs>
+
+      <!-- Chamfered octagonal frame -->
+      <path d="M 9 1.5 L 39 1.5 L 46.5 9 L 46.5 39 L 39 46.5 L 9 46.5 L 1.5 39 L 1.5 9 Z" fill="none" stroke="url(#nordlab-copper)" stroke-width="1.2" />
+      
+      <!-- Inner frame detail -->
+      <path d="M 11 4.5 L 37 4.5 L 43.5 11 L 43.5 37 L 37 43.5 L 11 43.5 L 4.5 37 L 4.5 11 Z" fill="none" stroke="url(#nordlab-copper)" stroke-width="0.4" opacity="0.25" />
+
+      <!-- The N -->
+      <rect x="12" y="12" width="4.8" height="24" fill="url(#nordlab-copper)" />
+      <polygon points="12,12 16.8,12 36,36 31.2,36" fill="url(#nordlab-copper)" />
+      <rect x="31.2" y="12" width="4.8" height="24" fill="url(#nordlab-copper)" />
+      <polygon points="33.6,7.5 36.8,12 33.6,14.5 30.4,12" fill="url(#nordlab-copper)" />
+      
+      <!-- Accents -->
+      <line x1="10" y1="40" x2="38" y2="40" stroke="url(#nordlab-copper)" stroke-width="0.8" opacity="0.35" />
+      <line x1="1.5" y1="24" x2="4" y2="24" stroke="url(#nordlab-copper)" stroke-width="0.5" opacity="0.2" />
+      <line x1="44" y1="24" x2="46.5" y2="24" stroke="url(#nordlab-copper)" stroke-width="0.5" opacity="0.2" />
+    </g>
+
+    <!-- Text Group (Right side) -->
+    <g transform="translate(-130, 0)">
+      <!-- NordLab Wordmark: Using tspan for natural spacing -->
+      <text font-family="Arial, sans-serif" font-size="96" letter-spacing="0.1em" x="0" y="20">
+        <tspan font-weight="300" fill="#F5F5F0">NORD</tspan><tspan font-weight="500" fill="#C9915A">LAB</tspan>
+      </text>
+      
+      <!-- Tagline -->
+      <text font-family="Arial, sans-serif" font-weight="400" font-size="24" letter-spacing="0.35em" fill="#A8A29E" x="5" y="70">SYSTEMS FOR DISTRIBUTORS</text>
+    </g>
+  </g>
+</svg>
