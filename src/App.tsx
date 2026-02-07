@@ -11,14 +11,11 @@ import { WhyUsSection } from "./components/WhyUsSection";
 import { TeamSection } from "./components/TeamSection";
 import { CTASection } from "./components/CTASection";
 import { Footer } from "./components/Footer";
-import { SEO } from "./components/SEO";
-
 import { CalComIntegration } from "./components/CalComIntegration";
 
 export function App() {
   return (
     <div className="min-h-screen bg-obsidian text-cream relative">
-      <SEO />
       <CalComIntegration />
       {/* Noise texture overlay */}
       <div className="noise-overlay" aria-hidden="true" />
