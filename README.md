@@ -36,4 +36,3 @@ NordLab is a marketing website for a development agency that builds custom deale
 1. Clone the repo: git clone https://github.com/nordlab/nordlab.git
 2. Install dependencies: npm install
 3. Run dev server: npm run dev
-4. Open http://localhost:5173
