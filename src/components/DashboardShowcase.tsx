@@ -127,7 +127,7 @@ function DealerPortalDashboard() {
         </div>
         <div className="flex-1 mx-4">
           <div className="bg-[#0f1117] rounded-md px-4 py-1.5 text-[11px] text-warm-gray/40 text-center max-w-md mx-auto">
-            portal.nordlab.app/dealer/midwest-kitchen-supply
+            portal.nordlab.online/dealer/midwest-kitchen-supply
           </div>
         </div>
       </div>
@@ -153,11 +153,10 @@ function DealerPortalDashboard() {
             ].map((item) => (
               <div
                 key={item.label}
-                className={`flex items-center gap-2 px-2.5 py-2 rounded text-[11px] ${
-                  item.active
+                className={`flex items-center gap-2 px-2.5 py-2 rounded text-[11px] ${item.active
                     ? 'bg-copper/10 text-copper'
                     : 'text-warm-gray/40 hover:text-warm-gray/60'
-                }`}
+                  }`}
               >
                 <span className="text-[10px]">{item.icon}</span>
                 {item.label}
@@ -189,11 +188,10 @@ function DealerPortalDashboard() {
             {['All Products', 'Cabinets', 'Countertops', 'Hardware', 'Accessories'].map((cat, i) => (
               <div
                 key={cat}
-                className={`px-3 py-1.5 rounded-md text-[11px] whitespace-nowrap ${
-                  i === 1
+                className={`px-3 py-1.5 rounded-md text-[11px] whitespace-nowrap ${i === 1
                     ? 'bg-copper/15 text-copper'
                     : 'bg-[#161820] text-warm-gray/40 border border-warm-gray/8'
-                }`}
+                  }`}
               >
                 {cat}
               </div>
@@ -247,7 +245,7 @@ function QuotingDashboard() {
         </div>
         <div className="flex-1 mx-4">
           <div className="bg-[#0f1117] rounded-md px-4 py-1.5 text-[11px] text-warm-gray/40 text-center max-w-md mx-auto">
-            portal.nordlab.app/quotes/QT-2024-1847
+            portal.nordlab.online/quotes/QT-2024-1847
           </div>
         </div>
       </div>
@@ -272,11 +270,10 @@ function QuotingDashboard() {
             ].map((item) => (
               <div
                 key={item.label}
-                className={`flex items-center justify-between px-2.5 py-2 rounded text-[11px] ${
-                  item.active
+                className={`flex items-center justify-between px-2.5 py-2 rounded text-[11px] ${item.active
                     ? 'bg-copper/10 text-copper'
                     : 'text-warm-gray/40'
-                }`}
+                  }`}
               >
                 <span>{item.label}</span>
                 {item.count && (
@@ -381,7 +378,7 @@ function InventoryDashboard() {
         </div>
         <div className="flex-1 mx-4">
           <div className="bg-[#0f1117] rounded-md px-4 py-1.5 text-[11px] text-warm-gray/40 text-center max-w-md mx-auto">
-            portal.nordlab.app/inventory/overview
+            portal.nordlab.online/inventory/overview
           </div>
         </div>
       </div>
@@ -513,7 +510,7 @@ function SalesOperationsDashboard() {
         </div>
         <div className="flex-1 mx-4">
           <div className="bg-[#0f1117] rounded-md px-4 py-1.5 text-[11px] text-warm-gray/40 text-center max-w-md mx-auto">
-            portal.nordlab.app/operations/dashboard
+            portal.nordlab.online/operations/dashboard
           </div>
         </div>
       </div>
@@ -884,11 +881,10 @@ export function DashboardShowcase() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-4 py-2.5 rounded-md text-sm font-medium transition-all duration-200 ${
-                activeTab === tab.id
+              className={`px-4 py-2.5 rounded-md text-sm font-medium transition-all duration-200 ${activeTab === tab.id
                   ? 'bg-copper/15 text-copper border border-copper/30'
                   : 'bg-charcoal/40 text-warm-gray/40 border border-warm-gray/8 hover:text-warm-gray/60 hover:border-warm-gray/15'
-              }`}
+                }`}
             >
               {tab.label}
             </button>

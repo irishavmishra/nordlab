@@ -2,7 +2,7 @@
 
 B2B ordering portals and sales systems for product distributors.
 
-Live: https://nordlab.agency/
+Live: https://nordlab.online/
 
 ## What It Does
 
