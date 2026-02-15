@@ -1,4 +1,6 @@
-import { useEffect, useRef, useState, useCallback } from 'react';
+"use client";
+
+import { useEffect, useRef, useState, useCallback } from "react";
 
 interface ScrollRevealOptions {
   threshold?: number;
@@ -9,7 +11,7 @@ interface ScrollRevealOptions {
 export function useScrollReveal<T extends HTMLElement>(
   options: ScrollRevealOptions = {}
 ) {
-  const { threshold = 0.15, rootMargin = '0px 0px -60px 0px', once = true } = options;
+  const { threshold = 0.15, rootMargin = "0px 0px -60px 0px", once = true } = options;
   const ref = useRef<T>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -42,7 +44,7 @@ export function useScrollReveal<T extends HTMLElement>(
 export function useStaggerReveal<T extends HTMLElement>(
   options: ScrollRevealOptions = {}
 ) {
-  const { threshold = 0.1, rootMargin = '0px 0px -40px 0px', once = true } = options;
+  const { threshold = 0.1, rootMargin = "0px 0px -40px 0px", once = true } = options;
   const ref = useRef<T>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -74,8 +76,8 @@ export function useCountUp(
   end: number,
   isVisible: boolean,
   duration: number = 1500,
-  prefix: string = '',
-  suffix: string = ''
+  prefix: string = "",
+  suffix: string = ""
 ) {
   const [display, setDisplay] = useState(`${prefix}0${suffix}`);
 

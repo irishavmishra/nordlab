@@ -1,4 +1,6 @@
-import { useScrollReveal, useStaggerReveal } from '../hooks/useScrollReveal';
+'use client';
+
+import { useScrollReveal, useStaggerReveal } from '@/hooks/useScrollReveal';
 
 const solutions = [
   {

@@ -1,25 +1,27 @@
-import { useScrollReveal, useStaggerReveal } from '../hooks/useScrollReveal';
+"use client";
+
+import { useScrollReveal, useStaggerReveal } from "@/hooks/useScrollReveal";
 
 const problems = [
   {
-    number: '01',
-    title: 'Quoting Takes Days When It Should Take Minutes',
-    description: 'A dealer asks for pricing on 60 SKUs. Your rep opens a spreadsheet, cross-references a price list that may or may not be current, builds a PDF, and emails it back. Two days later. By then, the dealer already called your competitor.',
+    number: "01",
+    title: "Quoting Takes Days When It Should Take Minutes",
+    description: "A dealer asks for pricing on 60 SKUs. Your rep opens a spreadsheet, cross-references a price list that may or may not be current, builds a PDF, and emails it back. Two days later. By then, the dealer already called your competitor.",
   },
   {
-    number: '02',
-    title: 'Dealer Orders Come in From Everywhere',
-    description: 'Some dealers email. Some call. A few still fax. Orders get entered manually, details get missed, and your team spends the first hour of every day sorting through yesterday\'s mess instead of shipping product.',
+    number: "02",
+    title: "Dealer Orders Come in From Everywhere",
+    description: "Some dealers email. Some call. A few still fax. Orders get entered manually, details get missed, and your team spends the first hour of every day sorting through yesterday's mess instead of shipping product.",
   },
   {
-    number: '03',
-    title: 'Nobody Knows What Is Actually in Stock',
-    description: 'Sales promises delivery on a product that warehouse sold out yesterday. Purchasing reorders something you already have 200 units of. Everyone is working off different numbers because there is no single place to look.',
+    number: "03",
+    title: "Nobody Knows What Is Actually in Stock",
+    description: "Sales promises delivery on a product that warehouse sold out yesterday. Purchasing reorders something you already have 200 units of. Everyone is working off different numbers because there is no single place to look.",
   },
   {
-    number: '04',
-    title: 'Your Best People Spend Their Time on Data Entry',
-    description: 'You hired experienced sales reps to grow accounts and close deals. Instead, they copy order details between systems, answer "where is my shipment" calls, and manually update tracking spreadsheets. That is not a staffing problem. That is a systems problem.',
+    number: "04",
+    title: "Your Best People Spend Their Time on Data Entry",
+    description: "You hired experienced sales reps to grow accounts and close deals. Instead, they copy order details between systems, answer \"where is my shipment\" calls, and manually update tracking spreadsheets. That is not a staffing problem. That is a systems problem.",
   },
 ];
 
@@ -33,7 +35,7 @@ export function ProblemsSection() {
         {/* Header */}
         <div
           ref={header.ref}
-          className={`max-w-3xl mb-16 reveal-up ${header.isVisible ? 'visible' : ''}`}
+          className={`max-w-3xl mb-16 reveal-up ${header.isVisible ? "visible" : ""}`}
         >
           <span className="text-copper text-sm tracking-[0.25em] uppercase font-medium">
             Sound Familiar?
@@ -51,7 +53,7 @@ export function ProblemsSection() {
           {problems.map((problem, i) => (
             <div
               key={problem.number}
-              className={`group relative bg-obsidian/60 p-8 lg:p-10 transition-all duration-300 hover:bg-obsidian/90 border border-warm-gray/5 hover:border-copper/20 reveal-up ${cards.isVisible ? 'visible' : ''} stagger-${i + 1}`}
+              className={`group relative bg-obsidian/60 p-8 lg:p-10 transition-all duration-300 hover:bg-obsidian/90 border border-warm-gray/5 hover:border-copper/20 reveal-up ${cards.isVisible ? "visible" : ""} stagger-${i + 1}`}
             >
               {/* Number */}
               <div className="flex items-start gap-4 mb-5">

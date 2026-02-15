@@ -1,29 +1,31 @@
-import { useScrollReveal, useStaggerReveal } from '../hooks/useScrollReveal';
+"use client";
+
+import { useScrollReveal, useStaggerReveal } from "@/hooks/useScrollReveal";
 
 const steps = [
   {
-    number: 'I',
-    title: 'Map Your Current Process',
-    subtitle: 'Days 1-3',
-    description: 'We sit with your sales team, your warehouse, and your operations manager. We document exactly how orders, quotes, and inventory move through your business today. Every workaround. Every bottleneck. Every "we just deal with it" moment.',
+    number: "I",
+    title: "Map Your Current Process",
+    subtitle: "Days 1-3",
+    description: "We sit with your sales team, your warehouse, and your operations manager. We document exactly how orders, quotes, and inventory move through your business today. Every workaround. Every bottleneck. Every \"we just deal with it\" moment.",
   },
   {
-    number: 'II',
-    title: 'Design Around Your Business',
-    subtitle: 'Week 1-2',
-    description: 'We design a system that fits your workflow. If your dealers need to see live pricing by tier, we build that. If your warehouse needs to confirm stock before a quote goes out, we build that. No generic templates. No forcing your team to learn someone else\'s logic.',
+    number: "II",
+    title: "Design Around Your Business",
+    subtitle: "Week 1-2",
+    description: "We design a system that fits your workflow. If your dealers need to see live pricing by tier, we build that. If your warehouse needs to confirm stock before a quote goes out, we build that. No generic templates. No forcing your team to learn someone else's logic.",
   },
   {
-    number: 'III',
-    title: 'Build and Launch in Phases',
-    subtitle: 'Week 2-3',
-    description: 'We do not disappear for six months and come back with a finished product. We ship the highest-impact piece first. Usually the quoting system or the dealer portal. Your team starts using it, we get real feedback, and we keep building from there.',
+    number: "III",
+    title: "Build and Launch in Phases",
+    subtitle: "Week 2-3",
+    description: "We do not disappear for six months and come back with a finished product. We ship the highest-impact piece first. Usually the quoting system or the dealer portal. Your team starts using it, we get real feedback, and we keep building from there.",
   },
   {
-    number: 'IV',
-    title: 'Improve as Your Business Grows',
-    subtitle: 'Ongoing',
-    description: 'You add a new product line. You onboard 30 more dealers. You want your reps to see real-time commission numbers. We stay with you and evolve the system so it never falls behind your business again.',
+    number: "IV",
+    title: "Improve as Your Business Grows",
+    subtitle: "Ongoing",
+    description: "You add a new product line. You onboard 30 more dealers. You want your reps to see real-time commission numbers. We stay with you and evolve the system so it never falls behind your business again.",
   },
 ];
 
@@ -35,7 +37,7 @@ export function ProcessSection() {
     <section id="process" className="relative py-24 md:py-32 bg-charcoal">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Header */}
-        <div ref={header.ref} className={`max-w-3xl mb-16 reveal-up ${header.isVisible ? 'visible' : ''}`}>
+        <div ref={header.ref} className={`max-w-3xl mb-16 reveal-up ${header.isVisible ? "visible" : ""}`}>
           <span className="text-copper text-sm tracking-[0.25em] uppercase font-medium">
             How It Works
           </span>
@@ -52,7 +54,7 @@ export function ProcessSection() {
           {steps.map((step, index) => (
             <div
               key={step.number}
-              className={`group relative grid md:grid-cols-[120px_1fr] gap-6 md:gap-10 py-10 border-b border-warm-gray/10 last:border-b-0 transition-colors duration-300 hover:bg-obsidian/20 reveal-up ${steps$.isVisible ? 'visible' : ''} stagger-${index + 1}`}
+              className={`group relative grid md:grid-cols-[120px_1fr] gap-6 md:gap-10 py-10 border-b border-warm-gray/10 last:border-b-0 transition-colors duration-300 hover:bg-obsidian/20 reveal-up ${steps$.isVisible ? "visible" : ""} stagger-${index + 1}`}
             >
               {/* Number and subtitle */}
               <div className="flex md:flex-col items-baseline md:items-start gap-3 md:gap-2">
