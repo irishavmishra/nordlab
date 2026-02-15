@@ -1,22 +1,18 @@
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
-import { WhoWeWorkWith } from "@/components/WhoWeWorkWith";
 import { ProblemsSection } from "@/components/ProblemsSection";
-import { SolutionsSection } from "@/components/SolutionsSection";
 import { DashboardShowcase } from "@/components/DashboardShowcase";
+import { SolutionsSection } from "@/components/SolutionsSection";
 import { ProcessSection } from "@/components/ProcessSection";
 import { PricingSection } from "@/components/PricingSection";
 import { UseCasesSection } from "@/components/UseCasesSection";
 import { WhyUsSection } from "@/components/WhyUsSection";
-import { TeamSection } from "@/components/TeamSection";
 import { CTASection } from "@/components/CTASection";
 import { Footer } from "@/components/Footer";
-import { CalComIntegration } from "@/components/CalComIntegration";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-obsidian text-cream relative">
-      <CalComIntegration />
       {/* Noise texture overlay */}
       <div className="noise-overlay" aria-hidden="true" />
 
@@ -26,15 +22,13 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
-        <WhoWeWorkWith />
         <ProblemsSection />
-        <SolutionsSection />
         <DashboardShowcase />
+        <SolutionsSection />
         <ProcessSection />
         <PricingSection />
         <UseCasesSection />
         <WhyUsSection />
-        <TeamSection />
         <CTASection />
       </main>
       <Footer />

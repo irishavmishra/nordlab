@@ -4,28 +4,37 @@ import { useScrollReveal, useStaggerReveal } from "@/hooks/useScrollReveal";
 
 const steps = [
   {
-    number: "I",
-    title: "Map Your Current Process",
-    subtitle: "Days 1-3",
-    description: "We sit with your sales team, your warehouse, and your operations manager. We document exactly how orders, quotes, and inventory move through your business today. Every workaround. Every bottleneck. Every \"we just deal with it\" moment.",
+    number: "1",
+    title: "Connect Your Data",
+    subtitle: "Day 1",
+    description: "Upload your product catalog and dealer list. We handle CSV, Excel, or direct ERP integration. Your products and pricing are live in minutes.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+      </svg>
+    ),
   },
   {
-    number: "II",
-    title: "Design Around Your Business",
-    subtitle: "Week 1-2",
-    description: "We design a system that fits your workflow. If your dealers need to see live pricing by tier, we build that. If your warehouse needs to confirm stock before a quote goes out, we build that. No generic templates. No forcing your team to learn someone else's logic.",
+    number: "2",
+    title: "Set Your Pricing",
+    subtitle: "Day 2",
+    description: "Define dealer tiers and discount levels. The system applies them automatically. Each dealer sees their personalized pricing when they log in.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182-.879-.879-3.07-.879-4.242 0-.879.879-.879 2.303 0 3.182zM16 12H8m8 0a4 4 0 11-8 0 4 4 0 018 0z" />
+      </svg>
+    ),
   },
   {
-    number: "III",
-    title: "Build and Launch in Phases",
-    subtitle: "Week 2-3",
-    description: "We do not disappear for six months and come back with a finished product. We ship the highest-impact piece first. Usually the quoting system or the dealer portal. Your team starts using it, we get real feedback, and we keep building from there.",
-  },
-  {
-    number: "IV",
-    title: "Improve as Your Business Grows",
-    subtitle: "Ongoing",
-    description: "You add a new product line. You onboard 30 more dealers. You want your reps to see real-time commission numbers. We stay with you and evolve the system so it never falls behind your business again.",
+    number: "3",
+    title: "Invite Your Dealers",
+    subtitle: "Day 3",
+    description: "Send login links to your dealers. They browse your catalog, see their pricing, and place orders. No training needed. No phone calls required.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+      </svg>
+    ),
   },
 ];
 
@@ -34,54 +43,73 @@ export function ProcessSection() {
   const steps$ = useStaggerReveal<HTMLDivElement>();
 
   return (
-    <section id="process" className="relative py-24 md:py-32 bg-charcoal">
+    <section id="how-it-works" className="relative py-24 md:py-32 bg-charcoal">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Header */}
-        <div ref={header.ref} className={`max-w-3xl mb-16 reveal-up ${header.isVisible ? "visible" : ""}`}>
+        <div ref={header.ref} className={`max-w-3xl mx-auto text-center mb-16 reveal-up ${header.isVisible ? "visible" : ""}`}>
           <span className="text-copper text-sm tracking-[0.25em] uppercase font-medium">
             How It Works
           </span>
           <h2 className="serif-display text-cream text-3xl sm:text-4xl md:text-5xl mt-4 mb-4">
-            A Clear Process <span className="serif-italic copper-text">With No Surprises</span>
+            From Signup to Live in <span className="serif-italic copper-text">72 Hours</span>
           </h2>
-          <p className="text-warm-gray/60 text-base max-w-xl">
-            You will know what is being built, when it ships, and what it costs at every step. No scope creep. No six-month black box.
+          <p className="text-warm-gray/60 text-base max-w-xl mx-auto">
+            No discovery calls. No custom development. No six-month projects. 
+            Upload your data, set your pricing, invite your dealers. Done.
           </p>
         </div>
 
         {/* Steps */}
-        <div ref={steps$.ref} className="space-y-0">
+        <div ref={steps$.ref} className="grid md:grid-cols-3 gap-8">
           {steps.map((step, index) => (
             <div
               key={step.number}
-              className={`group relative grid md:grid-cols-[120px_1fr] gap-6 md:gap-10 py-10 border-b border-warm-gray/10 last:border-b-0 transition-colors duration-300 hover:bg-obsidian/20 reveal-up ${steps$.isVisible ? "visible" : ""} stagger-${index + 1}`}
+              className={`group relative bg-obsidian/40 border border-warm-gray/10 p-8 hover:border-copper/20 transition-all duration-300 reveal-up ${steps$.isVisible ? "visible" : ""} stagger-${index + 1}`}
             >
+              {/* Icon */}
+              <div className="w-12 h-12 rounded-full bg-copper/10 border border-copper/30 flex items-center justify-center text-copper mb-6 group-hover:bg-copper/15 group-hover:border-copper/50 transition-colors">
+                {step.icon}
+              </div>
+
               {/* Number and subtitle */}
-              <div className="flex md:flex-col items-baseline md:items-start gap-3 md:gap-2">
-                <span className="serif-display text-copper/40 text-2xl md:text-3xl group-hover:text-copper/70 transition-colors">
-                  {step.number}
-                </span>
-                <span className="text-warm-gray/30 text-xs tracking-[0.15em] uppercase">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-copper text-xs tracking-[0.15em] uppercase font-medium">
                   {step.subtitle}
                 </span>
               </div>
 
               {/* Content */}
-              <div>
-                <h3 className="serif-display text-cream text-xl lg:text-2xl mb-4 group-hover:text-copper transition-colors">
-                  {step.title}
-                </h3>
-                <p className="text-warm-gray/60 text-sm lg:text-base leading-relaxed max-w-2xl group-hover:text-warm-gray/80 transition-colors">
-                  {step.description}
-                </p>
-              </div>
+              <h3 className="serif-display text-cream text-xl lg:text-2xl mb-4 group-hover:text-copper transition-colors">
+                {step.title}
+              </h3>
+              <p className="text-warm-gray/60 text-sm leading-relaxed group-hover:text-warm-gray/80 transition-colors">
+                {step.description}
+              </p>
 
-              {/* Connector dot */}
+              {/* Connector line */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute -bottom-[5px] left-[56px] w-2.5 h-2.5 rounded-full border-2 border-warm-gray/15 bg-charcoal group-hover:border-copper/40 transition-colors z-10" aria-hidden="true" />
+                <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-px bg-warm-gray/20" aria-hidden="true">
+                  <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-warm-gray/30" />
+                </div>
               )}
             </div>
           ))}
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="mt-16 text-center">
+          <a
+            href="#pricing"
+            className="btn-copper text-obsidian px-8 py-4 text-base font-medium tracking-wide inline-flex items-center justify-center gap-3"
+          >
+            Start Setup — Takes 15 Minutes
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          <p className="text-warm-gray/30 text-xs mt-4">
+            No credit card required • Free for up to 5 dealers
+          </p>
         </div>
       </div>
     </section>

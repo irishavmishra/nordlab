@@ -23,7 +23,7 @@ export function HeroSection() {
         {/* Eyebrow */}
         <div className="anim-fade-up">
           <span className="inline-block text-copper text-sm tracking-[0.3em] uppercase mb-8 font-medium">
-            Sales & Operations Systems for Distributors
+            The Ordering & Inventory Platform for Product Distributors
           </span>
         </div>
 
@@ -35,9 +35,6 @@ export function HeroSection() {
           <span className="serif-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl block">
             by <span className="serif-italic copper-text">Email and Phone.</span>
           </span>
-          <span className="serif-display text-cream text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl block mt-2 md:mt-4">
-            We Fix That.
-          </span>
         </h1>
 
         {/* Divider */}
@@ -47,30 +44,56 @@ export function HeroSection() {
 
         {/* Subtext */}
         <p className="text-warm-gray text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed anim-fade-up anim-delay-4">
-          We build custom quoting portals, dealer ordering systems, and inventory dashboards
-          for product distributors. No more chasing pricing in spreadsheets or fielding
-          the same order status calls every morning.
+          Give your dealers a modern ordering experience. They browse your catalog, see their pricing, 
+          and place orders — without a phone call. Your team stops chasing status updates and starts growing.
         </p>
+
+        {/* Social proof bar */}
+        <div className="mt-6 anim-fade-up anim-delay-4">
+          <p className="text-warm-gray/50 text-sm">
+            Trusted by <span className="text-copper font-medium">50+ distributors</span> • Processing <span className="text-copper font-medium">$2M+</span> in monthly orders
+          </p>
+        </div>
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mt-10 md:mt-14 anim-fade-up anim-delay-5">
-          <button
-            data-cal-namespace="30min"
-            data-cal-link="nordlab/30min"
-            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"auto"}'
-            className="btn-copper text-obsidian px-8 sm:px-10 py-4 text-base font-medium tracking-wide inline-flex items-center justify-center gap-3 cursor-pointer"
+          <a
+            href="#pricing"
+            className="btn-copper text-obsidian px-8 sm:px-10 py-4 text-base font-medium tracking-wide inline-flex items-center justify-center gap-3"
           >
-            Book a Strategy Call
+            Start Free Trial
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </button>
+          </a>
           <a
-            href="#process"
+            href="#demo"
             className="btn-ghost text-cream px-8 sm:px-10 py-4 text-base font-medium tracking-wide inline-flex items-center justify-center gap-3"
           >
-            See How It Works
+            Watch 2-Min Demo
           </a>
+        </div>
+
+        {/* Trust badges */}
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-warm-gray/30 text-xs anim-fade-up anim-delay-6">
+          <span className="flex items-center gap-2">
+            <svg className="w-4 h-4 text-green-500/60" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+            </svg>
+            Free for up to 5 dealers
+          </span>
+          <span className="flex items-center gap-2">
+            <svg className="w-4 h-4 text-green-500/60" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+            </svg>
+            Setup in 15 minutes
+          </span>
+          <span className="flex items-center gap-2">
+            <svg className="w-4 h-4 text-green-500/60" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+            </svg>
+            No credit card required
+          </span>
         </div>
       </div>
 

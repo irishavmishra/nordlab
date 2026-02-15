@@ -4,20 +4,20 @@ import { useScrollReveal, useStaggerReveal } from '@/hooks/useScrollReveal';
 
 const reasons = [
   {
-    title: 'We only build business operations systems',
-    description: 'We do not build marketing sites, mobile apps, or SaaS products. We build quoting tools, ordering portals, and inventory systems for companies that move physical product. That is all we do, and we are very good at it.',
+    title: 'Purpose-Built for Distribution',
+    description: 'We only serve product distributors. Every feature exists because a distributor like you asked for it. No bloat. No unused features from other industries.',
   },
   {
-    title: 'We build around your process, not ours',
-    description: 'If you price by the truckload and not by the unit, we build for truckloads. If your dealers order differently than your contractors, we handle both flows. We do not hand you a generic system and tell you to adapt.',
+    title: '3 Days to Live, Not 6 Months',
+    description: 'No discovery calls. No custom development. Upload your catalog, set pricing, invite dealers. Done. Your team starts using it immediately.',
   },
   {
-    title: 'You see working software in weeks, not months',
-    description: 'We ship in focused phases. The first usable piece is typically live within two to three weeks. You are never waiting six months wondering what you are paying for.',
+    title: 'Improves Automatically',
+    description: 'New features ship weekly. Every distributor benefits. Your platform gets better without you paying more or managing updates.',
   },
   {
-    title: 'We stay with you as your operations grow',
-    description: 'You will add product lines. You will onboard new dealers. Your pricing will change. We do not hand you a finished system and disappear. We stay involved and make sure the system evolves with your business.',
+    title: 'You Own Your Data',
+    description: 'Export everything anytime. Your catalog, orders, and dealers belong to you. Not locked in our system. No vendor lock-in.',
   },
 ];
 
@@ -26,20 +26,20 @@ export function WhyUsSection() {
   const items = useStaggerReveal<HTMLDivElement>();
 
   return (
-    <section id="why-us" className="relative py-24 md:py-32 bg-charcoal">
+    <section id="why-nordlab" className="relative py-24 md:py-32 bg-charcoal">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid lg:grid-cols-[1fr_1.5fr] gap-12 lg:gap-20">
           {/* Left column */}
           <div ref={header.ref} className={`reveal-left ${header.isVisible ? 'visible' : ''}`}>
             <span className="text-copper text-sm tracking-[0.25em] uppercase font-medium">
-              Why Work With Us
+              Why NordLab
             </span>
             <h2 className="serif-display text-cream text-3xl sm:text-4xl md:text-5xl mt-4 mb-6">
-              We Are Not a <span className="serif-italic copper-text">Generic Dev Shop</span>
+              Built for Distributors, <span className="serif-italic copper-text">Not Developers</span>
             </h2>
             <div className="editorial-rule mb-6" />
             <p className="text-warm-gray/50 text-base leading-relaxed">
-              You have probably talked to agencies that build "anything for anyone." We are the opposite. We chose this niche because we understand the operational problems that distributors and wholesalers deal with every day.
+              We spent five years building operational systems before realizing distributors needed a product, not a project. That insight became NordLab.
             </p>
           </div>
 

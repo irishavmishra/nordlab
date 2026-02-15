@@ -27,19 +27,19 @@ export function UseCasesSection() {
   const header = useScrollReveal<HTMLDivElement>();
   const cases$ = useStaggerReveal<HTMLDivElement>();
 
-  return (
-    <section id="use-cases" className="relative py-24 md:py-32 bg-obsidian">
+return (
+    <section id="customers" className="relative py-24 md:py-32 bg-obsidian">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Header */}
         <div ref={header.ref} className={`max-w-3xl mb-16 reveal-up ${header.isVisible ? 'visible' : ''}`}>
           <span className="text-copper text-sm tracking-[0.25em] uppercase font-medium">
-            Real Scenarios
+            Customer Success Stories
           </span>
           <h2 className="serif-display text-cream text-3xl sm:text-4xl md:text-5xl mt-4 mb-4">
-            Businesses Like Yours, <span className="serif-italic copper-text">Before and After</span>
+            Distributors Like Yours, <span className="serif-italic copper-text">Before and After</span>
           </h2>
           <p className="text-warm-gray/60 text-base max-w-xl">
-            These are the kinds of situations we walk into every month. The details change. The pattern is always the same.
+            Real results from distributors who made the switch. The details change. The outcomes speak for themselves.
           </p>
         </div>
 

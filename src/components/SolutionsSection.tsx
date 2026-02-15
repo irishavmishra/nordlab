@@ -2,10 +2,11 @@
 
 import { useScrollReveal, useStaggerReveal } from '@/hooks/useScrollReveal';
 
-const solutions = [
+const modules = [
   {
-    title: 'Dealer Ordering Portal',
+    title: 'Dealer Portal',
     description: 'Your dealers log in, see your live catalog with their pricing, and place orders directly. No phone calls. No back-and-forth emails. Orders flow straight into your system, clean and complete, ready to pick and ship.',
+    features: ['Self-service ordering', 'Dealer-specific pricing', 'Order history & tracking', 'Mobile-friendly'],
     visual: (
       <div className="space-y-2.5">
         <div className="flex items-center justify-between text-xs">
@@ -28,6 +29,7 @@ const solutions = [
   {
     title: 'Quoting System',
     description: 'Your reps select products, the system pulls current pricing and applies dealer-specific discounts automatically. A branded quote goes out in minutes. Your dealers get faster answers, and your reps handle three times the volume without working late.',
+    features: ['Auto-apply dealer discounts', 'PDF quotes with your branding', 'Quote-to-order conversion', 'Expiration tracking'],
     visual: (
       <div className="space-y-2">
         <div className="flex items-center gap-3 text-xs">
@@ -48,8 +50,9 @@ const solutions = [
     ),
   },
   {
-    title: 'Inventory & Order Dashboard',
+    title: 'Inventory Dashboard',
     description: 'One screen that shows what is in stock, what is committed, what is incoming, and what is running low. Sales, warehouse, and purchasing all look at the same numbers. No more guessing. No more "let me check and call you back."',
+    features: ['Live stock levels', 'Low stock alerts', 'Incoming inventory tracking', 'Commitment visibility'],
     visual: (
       <div className="grid grid-cols-2 gap-2">
         <div className="bg-obsidian p-2.5 rounded text-center">
@@ -72,24 +75,25 @@ const solutions = [
     ),
   },
   {
-    title: 'Internal Operations Tools',
-    description: 'Custom-built tools for the things your business actually does every day. Whether that is routing orders by region, managing dealer credit terms, tracking rep commissions, or handling returns. Built around your process, not the other way around.',
+    title: 'Operations Dashboard',
+    description: 'Track rep performance, quote pipeline, dealer activity, and revenue from one screen. See what is working and what needs attention. Make decisions with real data instead of gut feel.',
+    features: ['Sales rep metrics', 'Quote pipeline tracking', 'Dealer activity feed', 'Revenue analytics'],
     visual: (
       <div className="space-y-2">
         <div className="flex items-center gap-2 text-xs">
           <div className="w-1 h-4 bg-copper/60 rounded-full" />
-          <span className="text-warm-gray/50">Order routing rules</span>
-          <span className="text-copper/50 ml-auto">Active</span>
+          <span className="text-warm-gray/50">Rep performance</span>
+          <span className="text-copper/50 ml-auto">Live</span>
         </div>
         <div className="flex items-center gap-2 text-xs">
           <div className="w-1 h-4 bg-copper/40 rounded-full" />
-          <span className="text-warm-gray/50">Commission tracking</span>
-          <span className="text-copper/50 ml-auto">Active</span>
+          <span className="text-warm-gray/50">Pipeline tracking</span>
+          <span className="text-copper/50 ml-auto">Live</span>
         </div>
         <div className="flex items-center gap-2 text-xs">
           <div className="w-1 h-4 bg-copper/30 rounded-full" />
-          <span className="text-warm-gray/50">Return processing</span>
-          <span className="text-copper/50 ml-auto">Active</span>
+          <span className="text-warm-gray/50">Revenue analytics</span>
+          <span className="text-copper/50 ml-auto">Live</span>
         </div>
       </div>
     ),
@@ -98,167 +102,65 @@ const solutions = [
 
 export function SolutionsSection() {
   const header = useScrollReveal<HTMLDivElement>();
-  const foundation = useScrollReveal<HTMLDivElement>();
   const cards = useStaggerReveal<HTMLDivElement>();
 
   return (
-    <section id="solutions" className="relative py-24 md:py-32 bg-obsidian">
+    <section id="platform" className="relative py-24 md:py-32 bg-obsidian">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Header */}
-        <div ref={header.ref} className={`max-w-3xl mb-16 reveal-up ${header.isVisible ? 'visible' : ''}`}>
+        <div ref={header.ref} className={`max-w-3xl mx-auto text-center mb-16 reveal-up ${header.isVisible ? 'visible' : ''}`}>
           <span className="text-copper text-sm tracking-[0.25em] uppercase font-medium">
-            What We Build
+            The NordLab Platform
           </span>
           <h2 className="serif-display text-cream text-3xl sm:text-4xl md:text-5xl mt-4 mb-4">
-            Systems That Replace the <span className="serif-italic copper-text">Spreadsheets and Guesswork</span>
+            One Platform, <span className="serif-italic copper-text">Four Core Modules</span>
           </h2>
-          <p className="text-warm-gray/60 text-base max-w-xl">
-            Every system we build connects to how your business already runs. We do not ask you to change your process to fit our software.
+          <p className="text-warm-gray/60 text-base max-w-xl mx-auto">
+            Everything your distribution business needs to run modern operations. 
+            Give your dealers a better experience and your team better tools.
           </p>
         </div>
 
-        {/* Digital Storefront - Foundation Card */}
-        <div ref={foundation.ref} className={`mb-6 lg:mb-8 reveal-scale ${foundation.isVisible ? 'visible' : ''}`}>
-          <div className="group relative bg-charcoal/50 border border-warm-gray/5 overflow-hidden transition-all duration-300 hover:border-copper/15">
-            {/* Foundation label */}
-            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-copper/60 via-copper/30 to-transparent" />
-            
-            <div className="grid md:grid-cols-2 gap-0">
-              {/* Left - Content */}
-              <div className="p-8 lg:p-10 flex flex-col justify-center">
-                <span className="text-copper/60 text-[10px] tracking-[0.3em] uppercase font-medium mb-4 block">
-                  The Foundation
-                </span>
-                <h3 className="serif-display text-cream text-xl lg:text-2xl mb-4 group-hover:text-copper transition-colors">
-                  Your Digital Storefront
-                </h3>
-                <p className="text-warm-gray/60 text-sm lg:text-base leading-relaxed group-hover:text-warm-gray/80 transition-colors">
-                  Before portals and dashboards, your business needs a front door that matches your reputation. A professional digital presence where dealers find your catalog, new partners evaluate your brand, and every system we build connects back to. Not a template. A foundation built for how distributors actually operate.
-                </p>
-              </div>
-
-              {/* Right - Mini website mockup */}
-              <div className="p-8 lg:p-10 border-t md:border-t-0 md:border-l border-warm-gray/5">
-                <div className="bg-obsidian/80 rounded-sm overflow-hidden border border-warm-gray/5">
-                  {/* Browser bar */}
-                  <div className="flex items-center gap-2 px-3 py-2 border-b border-warm-gray/5">
-                    <div className="flex gap-1.5">
-                      <div className="w-2 h-2 rounded-full bg-warm-gray/15" />
-                      <div className="w-2 h-2 rounded-full bg-warm-gray/15" />
-                      <div className="w-2 h-2 rounded-full bg-warm-gray/15" />
-                    </div>
-                    <div className="flex-1 mx-2">
-                      <div className="bg-charcoal/60 rounded-sm px-3 py-1 text-[9px] text-warm-gray/30 font-mono">
-                        www.your-company.com
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Mini website content */}
-                  <div className="p-4 space-y-3">
-                    {/* Nav */}
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-1.5">
-                        <div className="w-4 h-4 rounded-sm bg-copper/20 flex items-center justify-center">
-                          <div className="w-2 h-2 rounded-sm bg-copper/50" />
-                        </div>
-                        <div className="h-1.5 w-14 bg-warm-gray/15 rounded-sm" />
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <div className="h-1 w-8 bg-warm-gray/10 rounded-sm" />
-                        <div className="h-1 w-8 bg-warm-gray/10 rounded-sm" />
-                        <div className="h-1 w-8 bg-warm-gray/10 rounded-sm" />
-                        <div className="px-2 py-0.5 bg-copper/20 rounded-sm">
-                          <span className="text-[7px] text-copper/70">Dealer Login</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Hero area */}
-                    <div className="bg-charcoal/30 rounded-sm p-3 space-y-2">
-                      <div className="h-1.5 w-3/4 bg-warm-gray/12 rounded-sm" />
-                      <div className="h-1.5 w-1/2 bg-warm-gray/8 rounded-sm" />
-                      <div className="flex gap-2 mt-2">
-                        <div className="px-2 py-1 bg-copper/25 rounded-sm">
-                          <span className="text-[7px] text-copper/80">View Catalog</span>
-                        </div>
-                        <div className="px-2 py-1 bg-warm-gray/8 rounded-sm">
-                          <span className="text-[7px] text-warm-gray/40">Request Quote</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Product grid */}
-                    <div className="grid grid-cols-3 gap-1.5">
-                      {['Vanities', 'Wall Cabinets', 'Countertops'].map((name) => (
-                        <div key={name} className="bg-charcoal/20 rounded-sm p-2 text-center space-y-1.5">
-                          <div className="w-full h-6 bg-warm-gray/5 rounded-sm" />
-                          <div className="text-[7px] text-warm-gray/40">{name}</div>
-                          <div className="text-[7px] text-copper/40">48 SKUs</div>
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Trust bar */}
-                    <div className="flex items-center justify-center gap-4 pt-1">
-                      <div className="text-[6px] text-warm-gray/20 uppercase tracking-wider">200+ Dealers</div>
-                      <div className="w-px h-2 bg-warm-gray/10" />
-                      <div className="text-[6px] text-warm-gray/20 uppercase tracking-wider">Since 1994</div>
-                      <div className="w-px h-2 bg-warm-gray/10" />
-                      <div className="text-[6px] text-warm-gray/20 uppercase tracking-wider">3,000+ SKUs</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Connection lines to other systems */}
-                <div className="flex items-center justify-center gap-3 mt-4">
-                  <div className="flex items-center gap-1.5 text-[9px] text-warm-gray/25">
-                    <svg className="w-3 h-3 text-copper/30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                      <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                    Connects to Portal
-                  </div>
-                  <div className="w-px h-3 bg-warm-gray/10" />
-                  <div className="flex items-center gap-1.5 text-[9px] text-warm-gray/25">
-                    <svg className="w-3 h-3 text-copper/30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                      <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                    Feeds Quoting
-                  </div>
-                  <div className="w-px h-3 bg-warm-gray/10" />
-                  <div className="flex items-center gap-1.5 text-[9px] text-warm-gray/25">
-                    <svg className="w-3 h-3 text-copper/30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                      <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                    Syncs Inventory
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* 4 Solution cards - existing grid */}
+        {/* Module cards */}
         <div ref={cards.ref} className="grid md:grid-cols-2 gap-6 lg:gap-8">
-          {solutions.map((solution, i) => (
+          {modules.map((module, i) => (
             <div
-              key={solution.title}
+              key={module.title}
               className={`group bg-charcoal/50 border border-warm-gray/5 p-8 lg:p-10 transition-all duration-300 hover:border-copper/15 reveal-up ${cards.isVisible ? 'visible' : ''} stagger-${i + 1}`}
             >
               <h3 className="serif-display text-cream text-xl lg:text-2xl mb-4 group-hover:text-copper transition-colors">
-                {solution.title}
+                {module.title}
               </h3>
               
-              <p className="text-warm-gray/60 text-sm lg:text-base leading-relaxed mb-8 group-hover:text-warm-gray/80 transition-colors">
-                {solution.description}
+              <p className="text-warm-gray/60 text-sm lg:text-base leading-relaxed mb-6 group-hover:text-warm-gray/80 transition-colors">
+                {module.description}
               </p>
+
+              {/* Features */}
+              <ul className="grid grid-cols-2 gap-2 mb-6">
+                {module.features.map((feature, fi) => (
+                  <li key={fi} className="flex items-center gap-2 text-warm-gray/50 text-xs">
+                    <svg className="w-3 h-3 text-copper/50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
 
               {/* Mini data visual */}
               <div className="pt-6 border-t border-warm-gray/10">
-                {solution.visual}
+                {module.visual}
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Bottom note */}
+        <div className="mt-12 text-center">
+          <p className="text-warm-gray/40 text-sm">
+            All modules included in Growth and Pro plans. <a href="#pricing" className="text-copper/70 hover:text-copper transition-colors">See pricing →</a>
+          </p>
         </div>
       </div>
     </section>

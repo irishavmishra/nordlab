@@ -15,7 +15,6 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Lock body scroll when mobile menu is open
   useEffect(() => {
     if (mobileOpen) {
       document.body.classList.add("mobile-menu-open");
@@ -26,9 +25,9 @@ export function Header() {
   }, [mobileOpen]);
 
   const navLinks = [
-    { label: "Solutions", href: "#solutions" },
+    { label: "Platform", href: "#platform" },
     { label: "Pricing", href: "#pricing" },
-    { label: "Team", href: "#team" },
+    { label: "Customers", href: "#customers" },
   ];
 
   return (
@@ -57,17 +56,21 @@ export function Header() {
                   {link.label}
                 </a>
               ))}
+              <a
+                href="#pricing"
+                className="text-warm-gray text-sm tracking-wide link-underline hover:text-cream transition-colors duration-300"
+              >
+                Login
+              </a>
             </nav>
 
             {/* Desktop CTA */}
-            <button
-              data-cal-namespace="30min"
-              data-cal-link="nordlab/30min"
-              data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"auto"}'
-              className="hidden lg:inline-flex btn-copper text-obsidian px-6 py-3 text-sm font-medium tracking-wide cursor-pointer"
+            <a
+              href="#pricing"
+              className="hidden lg:inline-flex btn-copper text-obsidian px-6 py-3 text-sm font-medium tracking-wide"
             >
-              Book a Call
-            </button>
+              Start Free Trial
+            </a>
 
             {/* Mobile hamburger */}
             <button
@@ -110,16 +113,21 @@ export function Header() {
                 {link.label}
               </a>
             ))}
+            <a
+              href="#pricing"
+              onClick={() => setMobileOpen(false)}
+              className="text-cream text-2xl serif-display hover:text-copper transition-colors duration-300"
+            >
+              Login
+            </a>
             <div className="mt-4 pt-8 border-t border-slate-dark">
-              <button
-                data-cal-namespace="30min"
-                data-cal-link="nordlab/30min"
-                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"auto"}'
+              <a
+                href="#pricing"
                 onClick={() => setMobileOpen(false)}
-                className="btn-copper text-obsidian px-10 py-4 text-base font-medium tracking-wide inline-block cursor-pointer"
+                className="btn-copper text-obsidian px-10 py-4 text-base font-medium tracking-wide inline-block"
               >
-                Book a Strategy Call
-              </button>
+                Start Free Trial
+              </a>
             </div>
           </nav>
         </div>
