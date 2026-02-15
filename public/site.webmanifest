@@ -1,0 +1,9 @@
+{
+  "name": "NordLab - B2B Ordering Portal",
+  "short_name": "NordLab",
+  "icons": [],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#c9915a"
+}

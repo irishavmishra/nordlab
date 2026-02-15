@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -57,21 +59,21 @@ export function HeroSection() {
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mt-10 md:mt-14 anim-fade-up anim-delay-5">
-          <a
-            href="#pricing"
+          <Link
+            href="/signup"
             className="btn-copper text-obsidian px-8 sm:px-10 py-4 text-base font-medium tracking-wide inline-flex items-center justify-center gap-3"
           >
             Start Free Trial
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </a>
-          <a
-            href="#demo"
+          </Link>
+          <Link
+            href="/app"
             className="btn-ghost text-cream px-8 sm:px-10 py-4 text-base font-medium tracking-wide inline-flex items-center justify-center gap-3"
           >
-            Watch 2-Min Demo
-          </a>
+            View Demo Dashboard
+          </Link>
         </div>
 
         {/* Trust badges */}

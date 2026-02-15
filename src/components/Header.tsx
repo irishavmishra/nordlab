@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { NordLabLogo } from "./NordLabLogo";
+import Link from "next/link";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -41,9 +42,9 @@ export function Header() {
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <a href="#" className="flex items-center">
+            <Link href="/" className="flex items-center">
               <NordLabLogo size={42} />
-            </a>
+            </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-10">
@@ -56,21 +57,21 @@ export function Header() {
                   {link.label}
                 </a>
               ))}
-              <a
-                href="#pricing"
+              <Link
+                href="/login"
                 className="text-warm-gray text-sm tracking-wide link-underline hover:text-cream transition-colors duration-300"
               >
                 Login
-              </a>
+              </Link>
             </nav>
 
             {/* Desktop CTA */}
-            <a
-              href="#pricing"
+            <Link
+              href="/signup"
               className="hidden lg:inline-flex btn-copper text-obsidian px-6 py-3 text-sm font-medium tracking-wide"
             >
               Start Free Trial
-            </a>
+            </Link>
 
             {/* Mobile hamburger */}
             <button
@@ -113,21 +114,21 @@ export function Header() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="#pricing"
+            <Link
+              href="/login"
               onClick={() => setMobileOpen(false)}
               className="text-cream text-2xl serif-display hover:text-copper transition-colors duration-300"
             >
               Login
-            </a>
+            </Link>
             <div className="mt-4 pt-8 border-t border-slate-dark">
-              <a
-                href="#pricing"
+              <Link
+                href="/signup"
                 onClick={() => setMobileOpen(false)}
                 className="btn-copper text-obsidian px-10 py-4 text-base font-medium tracking-wide inline-block"
               >
                 Start Free Trial
-              </a>
+              </Link>
             </div>
           </nav>
         </div>
